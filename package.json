@@ -4,14 +4,15 @@
   "description": "A generated project at Fullstack Academy",
   "main": "server/start.js",
   "scripts": {
-    "start": "nodemon --watch server -e js,html server/start.js",
-    "test": "node_modules/.bin/testem",
+    "start": "nodemon --watch server,browser -e js,html server/start.js",
+    "test": "testem",
     "seed": "node ./bin/seed",
     "db-init": "./db-init.sh",
     "postinstall": "npm run db-init"
   },
   "dependencies": {
     "angular": "1.5.0",
+    "angular-ui-router": "^0.3.1",
     "babel": "^5.0.12",
     "bluebird": "^2.9.34",
     "body-parser": "^1.12.0",
@@ -36,5 +37,18 @@
     "chai": "3.5.0",
     "chai-spies": "0.7.1",
     "testem": "1.2.2"
-  }
+  },
+  "bin": {
+    "juke": "helper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yungtiec/juke-states.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yungtiec/juke-states/issues"
+  },
+  "homepage": "https://github.com/yungtiec/juke-states#readme"
 }
